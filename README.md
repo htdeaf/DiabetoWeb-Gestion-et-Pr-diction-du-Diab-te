@@ -1,8 +1,5 @@
----
-
 ## 📄 README.md
 
-```markdown
 # 🩺 DiabetoWeb – Gestion et Prédiction du Diabète
 
 DiabetoWeb est une application web développée avec **FastAPI**, **PostgreSQL** et un modèle de **Machine Learning** permettant aux médecins de gérer les dossiers médicaux de leurs patients et de prédire le risque de diabète.
@@ -109,8 +106,6 @@ Application disponible sur : [http://127.0.0.1:8000](http://127.0.0.1:8000)
 * **Base de données** : PostgreSQL + SQLAlchemy
 * **Machine Learning** : scikit-learn
 * **Serveur** : Uvicorn
-
----
 
 
 
