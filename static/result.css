@@ -1,0 +1,111 @@
+/* Reset & base */
+#result-page * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#result-page {
+  background-color: #f5f7fa;
+  color: #2c3e50;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Conteneur principal */
+#result-page .container {
+  background: white;
+  max-width: 450px;
+  width: 100%;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  text-align: center;
+}
+
+/* Titre */
+#result-page .title {
+  font-size: 24px;
+  color: #0077cc;
+  margin-bottom: 25px;
+}
+
+#result-page .patient-name {
+  color: #005fa3;
+  font-weight: 700;
+}
+
+/* Infos patient */
+#result-page .patient-info {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+#result-page .patient-info li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border-left: 4px solid #0077cc;
+}
+
+/* Diagnostic */
+#result-page .diagnostic {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+#result-page .high-risk {
+  color: #e74c3c; /* rouge vif */
+}
+
+#result-page .low-risk {
+  color: #27ae60; /* vert */
+}
+
+/* Boutons */
+#result-page .actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#result-page .btn {
+  background-color: #0077cc;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgb(0 119 204 / 0.3);
+}
+
+#result-page .btn:hover {
+  background-color: #005fa3;
+}
+
+#result-page .btn-secondary {
+  background-color: #6c757d;
+  box-shadow: 0 4px 8px rgb(108 117 125 / 0.3);
+}
+
+#result-page .btn-secondary:hover {
+  background-color: #565e64;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  #result-page .container {
+    padding: 20px;
+  }
+  #result-page .actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

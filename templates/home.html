@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiabetoWeb - Accueil</title>
+    <link rel="stylesheet" href="/static/home.css">
+</head>
+<body>
+    <header>
+        <!-- Icône du diabète -->
+        <div class="diabetes-icon" style="position: relative; width: 80px; height: 80px;">
+            <!-- Cercle bleu en SVG -->
+            <svg width="80" height="80" viewBox="0 0 100 100" style="position: absolute; top: 0; left: 0;">
+                <circle cx="50" cy="50" r="45" stroke="#007BFF" stroke-width="10" fill="none" />
+            </svg>
+            <!-- Image de goutte centrée -->
+            <img src="/static/blood.png" alt="Goutte de sang" style="
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                width: 50px;
+                height: 50px;
+                z-index: 1;">
+        </div>
+        <nav>
+            <a href="/dashboard">Accueil</a>
+            <a href="/login">Connexion</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="/static/Outils médicaux pour diabètes.png" alt="Bannière Santé">
+        <div class="hero-text">
+            <h2>Bienvenue sur DiabetoWeb</h2>
+            <p>Votre solution intelligente pour la gestion et la prévention du diabète.</p>
+            <a href="/login" class="btn">Commencer</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h3>📋 Gestion Patients</h3>
+            <p>Ajoutez, modifiez et supprimez les dossiers patients facilement.</p>
+        </div>
+        <div class="feature">
+            <h3>🤖 Prédiction</h3>
+            <p>Analyse intelligente pour détecter le risque de diabète.</p>
+        </div>
+        <div class="feature">
+            <h3>📊 Tableau de bord</h3>
+            <p>Suivez les tendances et statistiques médicales.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 DiabetoWeb - Tous droits réservés</p>
+    </footer>
+</body>
+</html>

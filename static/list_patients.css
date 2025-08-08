@@ -1,0 +1,103 @@
+/* Style général du corps */
+#patients-page {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4fb; /* plus clair et doux */
+    color: #1a2e4a; /* bleu foncé doux */
+    padding: 20px;
+}
+
+/* Titre */
+#patients-page h2 {
+    text-align: center;
+    color: #154a8a; /* bleu moyen foncé */
+    margin-bottom: 20px;
+}
+
+/* Tableau */
+#patients-page table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 8px rgba(21, 74, 138, 0.15); /* bleu léger */
+    background-color: #ffffff;
+}
+
+/* En-têtes */
+#patients-page th {
+    background-color: #154a8a; /* bleu foncé */
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+/* Cellules */
+#patients-page td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #cbd9f1; /* bleu très clair */
+    color: #1a2e4a;
+}
+
+/* Lignes paires avec fond différent */
+#patients-page tr:nth-child(even) {
+    background-color: #e8efff; /* bleu très clair doux */
+}
+
+/* Effet hover sur la ligne */
+#patients-page tr:hover {
+    background-color: #c9d8ff; /* bleu clair */
+}
+
+/* Bouton supprimer */
+#patients-page form button {
+    background-color: #af1616; /* bleu moyen */
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+#patients-page form button:hover {
+    background-color: #2c4d8f; /* bleu plus foncé */
+}
+
+/* Lien Modifier */
+#patients-page a {
+    display: inline-block;
+    margin-left: 10px;
+    background-color: #6b8cd6; /* bleu clair */
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+#patients-page a:hover {
+    background-color: #4a6cb3; /* bleu moyen */
+}
+
+/* Zone du bouton de retour */
+#patients-page .return-dashboard {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Bouton de retour */
+#patients-page .btn-dashboard {
+    background-color: #154a8a; /* bleu foncé */
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+#patients-page .btn-dashboard:hover {
+    background-color: #0d3261; /* bleu très foncé */
+}

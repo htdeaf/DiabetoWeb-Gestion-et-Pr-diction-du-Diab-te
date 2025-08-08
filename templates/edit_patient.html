@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Modifier Patient</title>
+    <link rel="stylesheet" href="\static\edit_patients.css">
+</head>
+<body>
+    <h2>Modifier les informations du patient</h2>
+
+    <!-- Action dynamique -->
+    <form action="/edit/{{ patient.id }}" method="post">
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="name" value="{{ patient.name }}" required>
+
+        <label for="age">Âge :</label>
+        <input type="number" id="age" name="age" value="{{ patient.age }}" required>
+
+        <label for="sex">Sexe :</label>
+        <select id="sex" name="sex" required>
+            <option value="Male" {% if patient.sex == 'Male' %}selected{% endif %}>Homme</option>
+            <option value="Female" {% if patient.sex == 'Female' %}selected{% endif %}>Femme</option>
+        </select>
+
+        <label for="glucose">Glucose :</label>
+        <input type="number" step="any" id="glucose" name="glucose" value="{{ patient.glucose }}" required>
+
+        <label for="bmi">BMI :</label>
+        <input type="number" step="any" id="bmi" name="bmi" value="{{ patient.bmi }}" required>
+
+        <label for="bloodpressure">Blood Pressure :</label>
+        <input type="number" step="any" id="bloodpressure" name="bloodpressure" value="{{ patient.bloodpressure }}" required>
+
+        <label for="pedigree">Pedigree :</label>
+        <input type="number" step="any" id="pedigree" name="pedigree" value="{{ patient.pedigree }}" required>
+
+        <button type="submit">Enregistrer</button>
+    </form>
+
+    <a href="/list_patients">⬅ Retour à la liste des patients</a>
+</body>
+</html>

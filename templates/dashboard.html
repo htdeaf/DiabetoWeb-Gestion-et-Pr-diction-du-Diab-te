@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Tableau de bord médecin - Détection du diabète</title>
+    <link rel="stylesheet" href="\static\dashboard.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+
+<header class="navbar">
+    <div class="navbar-left">
+        <img src="/static/blood.png" alt="Logo Détection Diabète" class="logo" />
+        <h1>Détection Diabète</h1>
+    </div>
+    <nav>
+        <a href="/login" class="btn logout-btn" title="Se déconnecter">Déconnexion</a>
+    </nav>
+</header>
+
+<main class="container" role="main">
+    <section class="actions" aria-labelledby="actions-title">
+        <h2 id="actions-title">Actions rapides</h2>
+        <div class="button-container">
+            <a href="/dashboard/add" class="btn" role="button" aria-label="Ajouter un patient">Ajouter un patient</a>
+        </div>
+    </section>
+
+    <section class="summary" aria-labelledby="summary-title">
+        <h2 id="summary-title">Résumé des patients</h2>
+        <p>Accédez à la liste des patients pour consulter, modifier ou supprimer leurs données cliniques et résultats de prédiction.</p>
+        <p><a href="/list_patients" class="btn-link" aria-label="Voir la liste complète des patients">Voir la liste des patients</a></p>
+    </section>
+</main>
+
+<footer role="contentinfo">
+    <p>© 2025 Détection du Diabète. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>

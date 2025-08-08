@@ -1,0 +1,16 @@
+# Ignorer fichiers sensibles
+.env
+
+# Ignorer fichiers Python compilés
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorer environnements virtuels
+venv/
+env/
+
+# Ignorer fichiers spécifiques à l'OS
+.DS_Store
+Thumbs.db

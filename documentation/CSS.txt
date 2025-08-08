@@ -1,0 +1,67 @@
+### Documentation sur le CSS : Le Style du Web 🎨
+
+Le **CSS** (Cascading Style Sheets) est un langage de feuille de style qui permet de définir la présentation et le style d'un document écrit en HTML. Il gère la mise en forme de la page, comme les couleurs, les polices, la mise en page et l'espacement, ce qui sépare la structure du contenu (HTML) de sa présentation visuelle (CSS). Cette séparation rend le développement web plus efficace et plus facile à gérer.
+
+-----
+
+### Principes de Base du CSS
+
+Une règle CSS se compose d'un **sélecteur**, qui cible un ou plusieurs éléments HTML, et d'un bloc de déclarations. Le bloc de déclarations est entouré d'accolades (`{}`) et contient une ou plusieurs **déclarations**. Chaque déclaration est une paire `propriété: valeur;` qui définit un aspect du style.
+
+#### **Syntaxe d'une Règle CSS**
+
+```css
+sélecteur {
+  propriété: valeur;
+  propriété-2: valeur-2;
+}
+```
+
+  * **Sélecteur** : Permet de choisir l'élément HTML à styliser.
+  * **Propriété** : C'est la caractéristique que vous souhaitez modifier (ex: `color`, `font-size`).
+  * **Valeur** : Définit la valeur de la propriété (ex: `blue`, `16px`).
+
+-----
+
+### Sélecteurs CSS Courants
+
+Les sélecteurs sont l'élément clé du CSS pour cibler les bons éléments.
+
+| Type de Sélecteur | Syntaxe | Exemple d'utilisation | Description |
+| :--- | :--- | :--- | :--- |
+| **Sélecteur de type** | `balise` | `p { color: red; }` | Cible tous les éléments d'un type de balise donné, comme `<p>`. |
+| **Sélecteur d'ID** | `#id` | `#mon-titre { font-weight: bold; }` | Cible un élément unique avec un attribut `id`. Un ID doit être unique dans la page. |
+| **Sélecteur de classe** | `.classe` | `.btn { background-color: blue; }` | Cible un ou plusieurs éléments avec un attribut `class`. |
+| **Sélecteur universel** | `*` | `* { margin: 0; }` | Cible tous les éléments de la page. |
+| **Sélecteurs combinés** | `parent enfant` | `div p { font-style: italic; }` | Cible les éléments enfants (p) d'un élément parent (div). |
+
+-----
+
+### Le Modèle de Boîte CSS 📦
+
+Le **modèle de boîte** est un concept fondamental en CSS. Chaque élément HTML est considéré comme une boîte rectangulaire, et le CSS permet de contrôler les dimensions et l'espacement de cette boîte.
+
+  * **Contenu** : L'espace occupé par le contenu réel de l'élément (texte, image).
+  * **Padding** : L'espace interne entre le contenu et la bordure de la boîte.
+  * **Border** : La ligne qui entoure le padding et le contenu.
+  * **Margin** : L'espace externe autour de la bordure, créant un espace entre les boîtes.
+
+Ces propriétés peuvent être gérées individuellement ou de manière abrégée. Par exemple, `margin: 10px 20px;` applique une marge de `10px` en haut et en bas, et de `20px` à gauche et à droite.
+
+-----
+
+### Intégrer le CSS dans votre HTML
+
+Il existe trois méthodes pour lier le CSS à un document HTML, la première étant la plus recommandée pour la maintenance et la réutilisation.
+
+1.  **Feuille de style externe** (recommandé) : Le CSS est stocké dans un fichier `.css` séparé et est lié au document HTML à l'aide de la balise `<link>` dans la section `<head>`.
+    ```html
+    <head>
+      <link rel="stylesheet" href="style.css">
+    </head>
+    ```
+2.  **Feuille de style interne** : Le CSS est placé à l'intérieur d'une balise `<style>` dans la section `<head>` du document HTML.
+3.  **Style en ligne** : Le CSS est appliqué directement à un élément HTML à l'aide de l'attribut `style`. Cette méthode est généralement déconseillée car elle rend le code plus difficile à lire et à modifier.
+    ```html
+    <p style="color: blue; font-size: 14px;">Ce texte est bleu.</p>
+    ```

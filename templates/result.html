@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Résultat du diagnostic</title>
+    <link rel="stylesheet" href="/static/result.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body id="result-page">
+
+  <div class="container">
+    <h2 class="title">Résultat pour <span class="patient-name">{{ name }}</span></h2>
+
+    <ul class="patient-info">
+      <li><strong>Âge :</strong> {{ age }}</li>
+      <li><strong>Sexe :</strong> {{ sex }}</li>
+      <li><strong>Glycémie (glucose) :</strong> {{ glucose }}</li>
+      <li><strong>IMC (BMI) :</strong> {{ bmi }}</li>
+      <li><strong>Pression sanguine :</strong> {{ bloodpressure }}</li>
+      <li><strong>Antécédents familiaux (pedigree) :</strong> {{ pedigree }}</li>
+    </ul>
+
+    <p class="diagnostic">
+      <strong>Diagnostic :</strong>
+      {% if result == "High Risk" %}
+        <span class="high-risk">Diabète détecté</span>
+      {% else %}
+        <span class="low-risk">Pas de diabète détecté</span>
+      {% endif %}
+    </p>
+
+    <div class="actions">
+      <a href="/dashboard/add" class="btn"> Ajouter un autre patient</a>
+      <a href="/list_patients" class="btn btn-secondary"> Voir la liste des patients</a>
+    </div>
+  </div>
+
+</body>
+</html>

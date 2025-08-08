@@ -1,0 +1,121 @@
+/* Styles spécifiques à la page de connexion */
+#login-page {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background-color: rgb(153, 168, 253);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Conteneur blanc semi-transparent */
+#login-page .form-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Titre principal */
+#login-page h2 {
+    color: #002b5c;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Formulaire */
+#login-page form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Labels */
+#login-page label {
+    color: #003366;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 6px;
+    display: block;
+}
+
+/* Champs input */
+#login-page input[type="text"],
+#login-page input[type="number"],
+#login-page input[type="password"],
+#login-page select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #cddff6;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #002b5c;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+#login-page input[type="text"]:focus,
+#login-page input[type="number"]:focus,
+#login-page input[type="password"]:focus,
+#login-page select:focus {
+    border-color: #003f8a;
+    outline: none;
+}
+
+/* Bouton submit */
+#login-page input[type="submit"] {
+    background-color: #003f8a;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#login-page input[type="submit"]:hover {
+    background-color: #002e6d;
+}
+
+/* Message erreur */
+#login-page .error-message {
+    color: #cc0000;
+    background: #ffdede;
+    padding: 10px;
+    border-left: 4px solid #cc0000;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Texte en bas */
+#login-page .Textebas {
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+    text-align: center;
+}
+
+/* Icône du diabète */
+#login-page .diabetes-icon {
+    margin-bottom: 20px;
+}

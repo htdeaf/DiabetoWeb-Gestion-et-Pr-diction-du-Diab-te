@@ -1,0 +1,77 @@
+FastAPI is a modern, high-performance web framework for building APIs with Python. It's designed to be fast to code, easy to use, and offers excellent performance comparable to NodeJS and Go. A core feature of FastAPI is its reliance on **Python type hints**, which provides several benefits including automatic data validation, serialization, and interactive API documentation.
+
+-----
+
+### Key Features
+
+  * **Fast**: Built on Starlette and Pydantic, it's one of the fastest Python frameworks available.
+  * **Fast to code**: Reduces developer-induced errors and boilerplate code.
+  * **Intuitive**: Excellent editor support with auto-completion due to type hints.
+  * **Automatic documentation**: FastAPI automatically generates interactive API documentation, accessible at `/docs` (using Swagger UI) and `/redoc` (using ReDoc) by default. This makes it easy for developers to test and understand the API.
+  * **Standards-based**: It's fully compatible with open standards for APIs like OpenAPI (formerly Swagger) and JSON Schema.
+
+-----
+
+### Basic Usage
+
+To get started with FastAPI, you need to install it along with an ASGI server like `uvicorn`.
+
+```bash
+pip install "fastapi[all]"
+```
+
+or
+
+```bash
+pip install fastapi uvicorn
+```
+
+Here's a simple example of a "Hello World" API:
+
+```python
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
+
+@app.get("/items/{item_id}")
+def read_item(item_id: int, q: str | None = None):
+    return {"item_id": item_id, "q": q}
+```
+
+To run this application, save the code as `main.py` and execute the following command in your terminal:
+
+```bash
+uvicorn main:app --reload
+```
+
+The `--reload` flag enables the server to restart automatically whenever you make changes to the code.
+
+-----
+
+### Data Validation and Serialization
+
+FastAPI leverages **Pydantic** for its data validation and serialization. By defining data models using Pydantic, FastAPI can automatically validate incoming requests and serialize outgoing responses.
+
+Here's an example of a Pydantic model:
+
+```python
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+class Item(BaseModel):
+    name: str
+    price: float
+    is_offer: bool | None = None
+
+app = FastAPI()
+
+@app.post("/items/")
+async def create_item(item: Item):
+    return item
+```
+
+In this example, the `/items/` endpoint expects a JSON payload that matches the `Item` model. FastAPI will automatically validate the incoming data, ensuring `name` is a string, `price` is a float, and `is_offer` is a boolean (or `None`). If the data is invalid, FastAPI returns a clear and helpful error message to the client.

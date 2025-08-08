@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ajouter un patient</title>
+  <link rel="stylesheet" href="/static/add_patient.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+
+  <div class="form-container">
+    <h2 class="form-title">Ajouter un patient</h2>
+    <form method="post" action="/dashboard/result">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Nom :</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="age">Âge :</label>
+          <input type="number" id="age" name="age" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="sex">Sexe :</label>
+          <select id="sex" name="sex" required>
+            <option value="">-- Sélectionnez --</option>
+            <option value="Masculin">Masculin</option>
+            <option value="Féminin">Féminin</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="glucose">Glucose :</label>
+          <input type="number" step="any" id="glucose" name="glucose" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="bmi">IMC (BMI) :</label>
+          <input type="number" step="any" id="bmi" name="bmi" required />
+        </div>
+
+        <div class="form-group">
+          <label for="bloodpressure">Tension artérielle :</label>
+          <input type="number" step="any" id="bloodpressure" name="bloodpressure" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group full-width">
+          <label for="pedigree">Pedigree :</label>
+          <input type="number" step="any" id="pedigree" name="pedigree" required />
+        </div>
+      </div>
+
+      <input type="submit" class="btn" value="Enregistrer" />
+
+    </form>
+
+    {% if result %}
+      <div class="alert alert-info">
+        Résultat de la prédiction : <strong>{{ result }}</strong>
+      </div>
+    {% endif %}
+  </div>
+
+</body>
+</html>

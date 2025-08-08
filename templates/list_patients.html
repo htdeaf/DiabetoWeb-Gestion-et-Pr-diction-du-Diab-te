@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Liste des patients</title>
+    <link rel="stylesheet" href="/static/list_patients.css" />
+</head>
+<body id="patients-page">
+
+    <h2>Liste des patients</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Âge</th>
+                <th>Glucose</th>
+                <th>Résultat</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for patient in patients %}
+            <tr>
+                <td>{{ patient.name }}</td>
+                <td>{{ patient.age }}</td>
+                <td>{{ patient.glucose }}</td>
+                <td>{{ patient.result }}</td>
+                <td>
+                    <form method="get" action="/delete/{{ patient.id }}" onsubmit="return confirm('Voulez-vous vraiment supprimer ce patient ?');" style="display:inline-block; margin-right: 8px;">
+                        <button type="submit">Supprimer</button>
+                    </form>
+                    <a href="/edit/{{ patient.id }}">Modifier</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Bouton retour dashboard -->
+    <div class="return-dashboard">
+        <a href="/dashboard" class="btn-dashboard">⬅ Retour au Dashboard</a>
+    </div>
+
+</body>
+</html>

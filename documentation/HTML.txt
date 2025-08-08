@@ -1,0 +1,48 @@
+### Documentation sur le HTML : Les Fondamentaux
+
+Le **🧱HTML** (HyperText Markup Language) est le langage de balisage standard utilisé pour créer et structurer le contenu des pages web. Il est le squelette de toute page, définissant le sens et la hiérarchie du contenu. Le HTML est interprété par les navigateurs web, qui affichent le contenu de manière visuelle pour l'utilisateur.
+
+-----
+
+### Structure d'un Document HTML
+
+Un document HTML est organisé en une série de **balises** et d'**éléments**. Une balise est généralement composée de crochets (`< >`) et entoure le contenu. La plupart des balises ont une ouverture (`<balise>`) et une fermeture (`</balise>`).
+
+#### **Balises Essentielles**
+
+  * `<!DOCTYPE html>` : C'est la déclaration de type de document. Elle doit toujours être la première ligne et indique au navigateur qu'il s'agit d'un document HTML5.
+  * `<html>` : L'élément racine qui englobe tout le contenu de la page.
+  * `<head>` : Contient des méta-informations sur la page, non visibles pour l'utilisateur. C'est ici que l'on trouve le titre de la page et les liens vers les fichiers CSS ou JavaScript.
+  * `<title>` : Définit le titre de la page qui apparaît dans l'onglet du navigateur.
+  * `<body>` : Contient tout le contenu visible de la page, comme les textes, les images, les liens, etc.
+
+#### **Exemple de structure de base**
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ma Première Page</title>
+  </head>
+  <body>
+    <h1>Bonjour, le monde !</h1>
+    <p>Ceci est un paragraphe.</p>
+  </body>
+</html>
+```
+
+-----
+
+### Éléments et Attributs Courants
+
+Le HTML est riche en balises pour structurer différents types de contenu. Les **attributs** fournissent des informations supplémentaires sur un élément et sont toujours placés dans la balise d'ouverture.
+
+| Catégorie | Balise et Attributs | Description |
+| :--- | :--- | :--- |
+| **Titres** | `<h1>` à `<h6>` | Utilisées pour les titres et sous-titres, `<h1>` étant le plus important. |
+| **Paragraphes** | `<p>` | Définit un paragraphe de texte. |
+| **Listes** | `<ul>`, `<ol>`, `<li>` | `<ul>` pour les listes non ordonnées (à puces), `<ol>` pour les listes ordonnées (numérotées), et `<li>` pour chaque élément de liste. |
+| **Liens** | `<a href="url">` | Crée un hyperlien. L'attribut `href` spécifie l'URL de destination. |
+| **Images** | `<img src="url" alt="texte alternatif">` | Intègre une image. L'attribut `src` est le chemin vers l'image et `alt` fournit un texte alternatif pour l'accessibilité. |
+| **Divisions** | `<div>` | Un conteneur générique de niveau bloc pour regrouper d'autres éléments. Souvent utilisé pour le stylisme avec CSS. |
+| **Classes et ID** | `class="nom-classe"`, `id="identifiant-unique"` | Attributs utilisés pour identifier des éléments afin de les styliser avec CSS ou de les manipuler avec JavaScript. Un `id` doit être unique dans la page, tandis qu'une `class` peut être utilisée sur plusieurs éléments. |
