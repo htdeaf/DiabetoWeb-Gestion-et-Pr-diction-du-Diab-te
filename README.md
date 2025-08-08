@@ -39,7 +39,7 @@ DiabetoWeb est une application web développée avec **FastAPI**, **PostgreSQL**
 
 ### 1️⃣ Cloner le dépôt
 ```bash
-git clone https://github.com/ton-utilisateur/DiabetoWeb.git
+git clone https://github.com/ton-utilisateur/DiabetoWeb.git](https://github.com/htdeaf/DiabetoWeb-Gestion-et-Pr-diction-du-Diab-te.git
 cd DiabetoWeb/appbackend
 ````
 
